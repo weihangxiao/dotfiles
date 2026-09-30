@@ -1,0 +1,20 @@
+# Ported from kunchenguid/dotfiles (home/.config/wezterm/wezterm.lua)
+
+# Theme: Rosé Pine Moon
+theme = Rose Pine Moon
+
+# Font
+font-family = Hack Nerd Font
+font-size = 15
+
+# Translucent + blurred background
+background-opacity = 0.8
+background-blur = 50
+
+# Dim unfocused splits (closest Ghostty equivalent of Kun's focus dimming)
+unfocused-split-opacity = 0.6
+
+# Minimal window chrome (WezTerm "RESIZE" decorations ≈ hidden titlebar)
+macos-titlebar-style = hidden
+window-padding-x = 8
+window-padding-y = 6
