@@ -64,12 +64,12 @@ else
   echo "  appended"
 fi
 
-# 6. tmux plugins (TPM + resurrect + continuum)
+# 6. tmux plugins (TPM + resurrect + continuum + vim-tmux-navigator)
 say "Installing tmux plugins"
-for p in tpm tmux-resurrect tmux-continuum; do
-  dest="$HOME/.config/tmux/plugins/$p"
+for p in tmux-plugins/tpm tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum christoomey/vim-tmux-navigator; do
+  dest="$HOME/.config/tmux/plugins/${p#*/}"
   if [ -d "$dest" ]; then echo "  $p already installed"
-  else git clone -q --depth 1 "https://github.com/tmux-plugins/$p" "$dest" && echo "  installed $p"; fi
+  else git clone -q --depth 1 "https://github.com/$p" "$dest" && echo "  installed $p"; fi
 done
 
 # 7. Neovim plugins (pinned by lazy-lock.json)
